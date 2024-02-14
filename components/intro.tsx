@@ -62,7 +62,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hi There</span>, I'm Wasay. A <span className="font-bold">self-taught ML Engineer Enthusiast and AI Researcher </span> 
+        <span className="font-bold">Hi There</span>, I'm Wasay. A <span className="font-bold">Experienced ML/DL Practitioner and AI Researcher</span> 
          with <span className="font-bold">3 years</span> of experience and multiple notable publications. 
         My expertise lies in <span className="bold">Machine Learning & Deep Learning Models</span>. 
 
