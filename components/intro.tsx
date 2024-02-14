@@ -64,7 +64,7 @@ export default function Intro() {
       >
         <span className="font-bold">Hi There</span>, I'm Wasay. A <span className="font-bold">Experienced ML/DL Practitioner and AI Researcher </span> 
          with <span className="font-bold">3 years</span> of experience and multiple notable publications. 
-        My expertise centers around <span className="bold">Ensemble Modeling & Natural Language Processing</span>. 
+        My expertise centers around <span className="font-bold">Ensemble Modeling & Natural Language Processing</span>. 
 
       </motion.h1>
 
