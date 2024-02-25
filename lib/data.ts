@@ -53,7 +53,7 @@ export const experiencesData = [
     title: "Graduated from Namal University",
     location: "Punjab, Pakistan",
     description:
-    "I'm currently enrolled at Namal University, where I maintain a solid CGPA of 3.5/4 in Computer Science. My current research focuses on embedded SuperComputing and the seamless integration of Machine Learning methodologies for elements finding and prediction in Natural Sciences.",
+    "I'm currently enrolled at Namal University, where I maintain a solid CGPA of in Computer Science. My current research focuses on embedded SuperComputing and the seamless integration of Machine Learning methodologies for elements finding and prediction in Natural Sciences.",
     icon: React.createElement(LuGraduationCap),
     date: "present-2025",
   },
