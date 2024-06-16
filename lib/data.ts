@@ -5,6 +5,8 @@ import { LuGraduationCap } from "react-icons/lu";
 import cnProject from "@/public/CN.png";
 import aoaProject from "@/public/aoa.png";
 import riscvProject from "@/public/riscv-final.png";
+import golProject from "@/public/gameoflife.png";
+
 
 export const links = [
   {
@@ -73,7 +75,7 @@ export const projectsData = [
     "description": "Distributed learning on medical data and SIEM solution provided Intel NUC and RISV-V based Cluster",
     "tags": ["MPI" ,"RISC-V", "SIEM"],
     "imageUrl": riscvProject
-  },  
+  },
   {
     title: "JPEG - A Lossy Image Compression Algorithm",
     description:
@@ -81,6 +83,12 @@ export const projectsData = [
     tags: ["OpenCV", "DSA", "Python"],
     imageUrl: aoaProject,
   },
+  {
+    "title": "Conway's Game of Life Simulation with Custom Buttons",
+    "description": "Implementation of Conway's Game of Life using raylib with Object-Oriented Programming (OOP)",
+    "tags": ["C++", "raylib", "OOP", "Simulation"],
+    "imageUrl": golProject
+  },    
 ] as const;
 
 export const skillsData = [
