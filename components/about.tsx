@@ -17,23 +17,17 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
-        Ever since I can remember, I've been hooked on two things: Predictive Modeling and Ethical Hacking. So, while I was busy securing my degree in{" "}
-        <span className="font-medium">Computer Science</span>, I thought, why not dive into the world of HPC & Machine Learning? It's like the Swiss Army knife of tech - super versatile and fun. My journey kicked off with Andrew Ng's Specialization, where I got cozy with{" "}
-        <span className="font-medium">all the important stuff related to Pre-Processing, ML and DL algorithms and multi-modeling</span>.
-        You know what I love most is the ability to mimic human-like learning and decision-making processes to solve problems. There's this rush you get when you finally crack the code, and it's addicting! I mean, who doesn't dig that feeling?
-        As for my go-to tools, you'll usually find me hanging out with{" "}
-        <span className="font-medium">
-          Python, Scikit-Learn, OpenCV, and Tensorflow
-        </span>
-        , like a tech-savvy (Which I really am 💻). In my tech toolkit, MPI and Cuda are like the Stark Industries' arc reactor - indispensable powerhouses. 
-        Beyond that, I'm always hungry for new challenges. Currently, seeking a {" "}
-        <span className="font-medium">remote </span> role to continue my journey.
+        Ever since I can remember, my passion has been split between Predictive Modeling and Ethical Hacking. With a degree in <span className="font-medium">Computer Science</span>, I've seamlessly integrated High-Performance Computing (HPC) and Machine Learning into my journey. From mastering essential techniques like <span className="font-medium">Pre-Processing and various ML algorithms</span> to exploring multi-modeling strategies, I thrive on solving intricate challenges with precision and creativity.
+
+        My recent focus revolves around a pioneering HPC project boasting a theoretical performance of 1.5 petaflops. This effort culminated in notable achievements, including securing the First Prize for Best Final Year Project at Bahria University and claiming top honors at NamalTechExpo2024 for my work on a Heterogeneous Cluster leveraging RISC-V. This innovative setup integrates Federated Learning and SIEM solutions to simulate and combat cyber threats effectively.
+
+        Currently seeking new opportunities in a <span className="font-medium">remote</span> capacity, I'm driven by a relentless pursuit of pushing technological boundaries and delivering impactful solutions.
       </p>
 
       <p>
-        <span className="italic">When I'm not in code mode,</span> you'll find me kicking back with a game of chess, wandering in the Open-World video games (Especially Genshin), or maybe even messing with my home network. Because who needs downtime when you can have uptime, right?
+        <span className="italic">When I'm not immersed in technology,</span> you'll find me strategizing over a chessboard, exploring immersive open-world video games (especially Genshin Impact), or fine-tuning my home network – because optimizing uptime is as crucial as solving the next big challenge.
       </p>
     </motion.section>
   );
