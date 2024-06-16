@@ -4,7 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import cnProject from "@/public/CN.png";
 import aoaProject from "@/public/aoa.png";
-import riscvProject from "@/public/riscv_hpc.jpeg"
+import riscvProject from "@/public/riscv.jpeg"
 
 export const links = [
   {
@@ -70,7 +70,7 @@ export const projectsData = [
   },
   {
     "title": "Heterogeneous Cluster with RISC-V for Federated Learning and SIEM",
-    "description": "Developed a unique edge AI cluster for federated learning on medical data and SIEM solution with an Intel NUC i5 6th gen as the head node and SiFive VisionFive 2 RISC-V boards as working nodes, achieving a 55% performance increase.",
+    "description": "Federated learning on medical data and SIEM solution provided Intel NUC and RISV-V based Cluster",
     "tags": ["Federated Learning","MPI" ,"RISC-V", "SIEM", "Edge AI", "Intel NUC", "SiFive VisionFive 2"],
     "imageUrl": riscvProject
   },  
