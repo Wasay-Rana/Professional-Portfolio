@@ -70,8 +70,8 @@ export const projectsData = [
   },
   {
     "title": "Heterogeneous Cluster with RISC-V for Federated Learning and SIEM",
-    "description": "Federated learning on medical data and SIEM solution provided Intel NUC and RISV-V based Cluster",
-    "tags": ["Federated Learning","MPI" ,"RISC-V", "SIEM", "Edge AI", "Intel NUC", "SiFive VisionFive 2"],
+    "description": "Distributed learning on medical data and SIEM solution provided Intel NUC and RISV-V based Cluster",
+    "tags": ["MPI" ,"RISC-V", "SIEM"],
     "imageUrl": riscvProject
   },  
   {
