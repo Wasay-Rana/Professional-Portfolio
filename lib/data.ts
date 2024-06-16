@@ -4,7 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import cnProject from "@/public/CN.png";
 import aoaProject from "@/public/aoa.png";
-import riscvProject from "@/public/risc_v.jpeg"
+import riscvProject from "@/public/risc_v.png"
 
 export const links = [
   {
