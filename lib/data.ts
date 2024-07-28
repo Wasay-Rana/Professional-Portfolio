@@ -6,7 +6,7 @@ import cnProject from "@/public/CN.png";
 import aoaProject from "@/public/aoa.png";
 import riscvProject from "@/public/riscv-final.png";
 import golProject from "@/public/gameoflife.png";
-
+import { FaLaptopCode } from "react-icons/fa";
 
 export const links = [
   {
@@ -59,6 +59,14 @@ export const experiencesData = [
     "I'm currently enrolled at Namal University, where I maintain a solid CGPA of in Computer Science. My current research focuses on embedded SuperComputing and the seamless integration of Machine Learning methodologies for elements finding and prediction in Natural Sciences.",
     icon: React.createElement(LuGraduationCap),
     date: "present-2025",
+  },
+  {
+    title: "Intern in a Software Department",
+    location: "DreamBig Semiconductor Inc. Karachi, Pakistan",
+    description:
+    "I am interning in Software Department of DreamBig, A multi-million dollar international startup, and it has given me a niche to work and follow on for future.",
+    icon: React.createElement(FaLaptopCode),
+    date: "July 2024 - September 2024",
   },
 ] as const;
 
