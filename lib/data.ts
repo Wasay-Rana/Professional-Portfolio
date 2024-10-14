@@ -72,31 +72,41 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "BlueWhale - A Network Anamoly Detection System",
-    description:
-      "By using UNSW-NB15 and CICIDS2018, formed a Multi-Modal ADS with F1 score of 94%.",
-    tags: ["Pandas", "Pytorch", "Scikit-Learn", "Colab", "Matplotlib","Seaborn"],
+    title: "BlueWhale - A Network Anomaly Detection System",
+    shortDescription:
+      "Multi-Modal ADS with 94% F1 score using UNSW-NB15 and CICIDS2018 datasets.",
+    detailedDescription:
+      "BlueWhale is a sophisticated Network Anomaly Detection System utilizing multi-modal machine learning models. Using the UNSW-NB15 and CICIDS2018 datasets, the system achieved an F1 score of 94%. The project employs Pandas for data manipulation, PyTorch for deep learning, and Scikit-Learn for model evaluation. Visualizations were crafted with Matplotlib and Seaborn for insights into data trends.",
+    tags: ["Pandas", "Pytorch", "Scikit-Learn", "Colab", "Matplotlib", "Seaborn"],
     imageUrl: cnProject,
   },
   {
-    "title": "Heterogeneous Cluster with RISC-V for Federated Learning and SIEM",
-    "description": "Distributed learning on medical data and SIEM solution provided Intel NUC and RISV-V based Cluster",
-    "tags": ["MPI" ,"RISC-V", "SIEM"],
-    "imageUrl": riscvProject
+    title: "Heterogeneous Cluster with RISC-V for Federated Learning and SIEM",
+    shortDescription:
+      "Distributed learning on medical data and SIEM using Intel NUC and RISC-V based clusters.",
+    detailedDescription:
+      "This project sets up a heterogeneous computing cluster comprising Intel NUC and RISC-V based systems for federated learning on medical data and a Security Information and Event Management (SIEM) solution. The project utilizes MPI for efficient parallel computing across nodes and aims to enhance the scalability and security of medical data analytics. ",
+    tags: ["MPI", "RISC-V", "SIEM"],
+    imageUrl: riscvProject,
   },
   {
     title: "JPEG - A Lossy Image Compression Algorithm",
-    description:
-      "Crafted a custom JPEG algorithm from scratch for a semester project, offering adjustable compression and enhanced image sizing capabilities.",
+    shortDescription:
+      "Custom JPEG compression algorithm with adjustable compression levels.",
+    detailedDescription:
+      "This project involves the implementation of a JPEG compression algorithm from scratch as a part of a semester project. The algorithm provides adjustable compression levels and ensures enhanced image sizing while minimizing data loss. OpenCV was used for image processing, and Python’s DSA structures aided in optimizing performance.",
     tags: ["OpenCV", "DSA", "Python"],
     imageUrl: aoaProject,
   },
   {
-    "title": "Conway's Game of Life Simulation with Custom Buttons",
-    "description": "Implementation of Conway's Game of Life using raylib with Object-Oriented Programming (OOP)",
-    "tags": ["C++", "raylib", "OOP", "Simulation"],
-    "imageUrl": golProject
-  },    
+    title: "Conway's Game of Life Simulation with Custom Buttons",
+    shortDescription:
+      "Simulates Conway's Game of Life using raylib with OOP principles.",
+    detailedDescription:
+      "This project implements Conway's Game of Life using the raylib library. The system simulates cellular automata with custom button controls. Written in C++ with Object-Oriented Programming (OOP) principles, the simulation offers a real-time display of the evolution of cells, showcasing intricate designs and patterns that emerge over time.",
+    tags: ["C++", "raylib", "OOP", "Simulation"],
+    imageUrl: golProject,
+  },
 ] as const;
 
 export const skillsData = [
