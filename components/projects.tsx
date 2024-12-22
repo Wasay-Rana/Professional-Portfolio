@@ -6,6 +6,13 @@ import Project from "./project";
 import Modal from "./modal";
 import { useSectionInView } from "@/lib/hooks";
 
+interface ProjectProps {
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: string; // Add imageUrl property
+}
+
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
   const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(null);

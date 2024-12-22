@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Muhammad Wasay | Personal Portfolio",
-  description: "Wasay is a Data Scientist and AI Researcher.",
+  description: "Wasay is a AI Compiler and Kernel Developer.",
 };
 
 export default function RootLayout({

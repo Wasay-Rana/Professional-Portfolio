@@ -27,7 +27,7 @@ export default function About() {
       </p>
 
       <p>
-         When I'm not immersed in technology, you'll find me strategizing over a chessboard, exploring immersive open-world video games (especially Genshin Impact), or fine-tuning my home network – because optimizing uptime is as crucial as solving the next big challenge.
+        When I'm not immersed in technology, you'll find me strategizing over a chessboard, exploring immersive open-world video games (especially Genshin Impact), or fine-tuning my home network – because optimizing uptime is as crucial as solving the next big challenge.
       </p>
     </motion.section>
   );
