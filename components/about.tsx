@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
-  const { ref } = useSectionInView("About");
+  const { ref } = useSectionInView("About", 0.5);
 
   return (
     <motion.section
@@ -19,15 +19,24 @@ export default function About() {
     >
       <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
-        Ever since I can remember, my passion has been split between Predictive Modeling and Ethical Hacking. With a degree in <span className="font-medium">Computer Science</span>, I've seamlessly integrated High-Performance Computing (HPC) and Machine Learning into my journey. From mastering essential techniques like <span className="font-medium">Pre-Processing and various ML algorithms</span> to exploring multi-modeling strategies, I thrive on solving intricate challenges with precision and creativity.
-
-        My recent project revolves around pioneering HPC project boasting a theoretical performance of 1.5 petaflops. I have maped the whole HPC stack on edge too, culminated in notable achievements, including securing the First Prize for Best Final Year Project at Bahria University and claiming top honors at NamalTechExpo2024 for my work on a Heterogeneous Cluster leveraging RISC-V. This innovative setup integrates Federated Learning and SIEM solutions to simulate and combat cyber threats effectively.
-
-        Currently seeking new opportunities in a <span className="font-medium">remote</span> capacity, I'm driven by a relentless pursuit of pushing technological boundaries and delivering impactful solutions.
+        I'm a <span className="font-medium">Platform Architect and AI/ML Engineer</span> at{" "}
+        <span className="font-medium">Phunware (NASDAQ: PHUN)</span>, where I design and ship
+        production AI infrastructure from LLM evaluation pipelines and observability stacks
+        to voice AI systems and multi-agent orchestration. I've scaled a healthcare AI product
+        to over <span className="font-medium">50,000 active users</span> and built HPC systems
+        with a theoretical throughput exceeding <span className="font-medium">1.2 petaflops</span>.
       </p>
-
+      <p className="mb-3">
+        My research on heterogeneous RISC-V cluster design was published in{" "}
+        <span className="font-medium">IEEE Xplore</span>, and my work on distributed LLM
+        inference earned <span className="font-medium">First Prize at the National Tech Expo</span>.
+        I hold a B.S. in Computer Science from Namal University (CGPA 3.51) and multiple
+        certifications including AWS Cloud Practitioner and Machine Learning Specialization
+        from DeepLearning.AI.
+      </p>
       <p>
-        When I'm not immersed in technology, you'll find me strategizing over a chessboard, exploring immersive open-world video games (especially Genshin Impact), or fine-tuning my home network – because optimizing uptime is as crucial as solving the next big challenge.
+        Outside of engineering, I stay sharp over a chessboard, explore open-world games,
+        and tune home network infrastructure because optimizing uptime is a mindset, not just a job.
       </p>
     </motion.section>
   );

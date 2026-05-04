@@ -9,7 +9,8 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import wasayImage from "public/wasay_ai.png"
+import wasayImage from "public/wasay_ai.png";
+
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -30,10 +31,9 @@ export default function Intro() {
               duration: 0.2,
             }}
           >
-
             <Image
               src={wasayImage}
-              alt="Wasay's Photo"
+              alt="Muhammad Wasay"
               width="192"
               height="192"
               quality={95}
@@ -41,19 +41,6 @@ export default function Intro() {
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
-
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-          </motion.span>
         </div>
       </div>
 
@@ -62,10 +49,14 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hi There</span>, I'm Wasay. A <span className="font-bold">Experienced ML/DL Practitioner and HPC Researcher </span> 
-         with <span className="font-bold">3 years</span> of experience and multiple notable publications. 
-        My expertise centers around <span className="font-bold">HPC, Ensemble Modeling & Natural Language Processing</span>. 
-
+        <span className="font-bold">Hi, I'm Wasay.</span> I'm a{" "}
+        <span className="font-bold">Platform Architect & AI/ML Engineer</span>{" "}
+        building production AI systems at{" "}
+        <span className="font-bold">Phunware (NASDAQ: PHUN)</span> — from
+        LLM evaluation pipelines and voice AI to{" "}
+        <span className="font-bold">multi-agent orchestration</span> and{" "}
+        HPC research published in{" "}
+        <span className="font-bold">IEEE Xplore</span>.
       </motion.h1>
 
       <motion.div
@@ -84,13 +75,13 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          Contact me{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/Muhammad_Wasay_CV.pdf"
+          href="/M_Wasay_CV.pdf"
           download
         >
           Download CV{" "}
@@ -101,6 +92,7 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/wasay786/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <BsLinkedin />
         </a>
@@ -109,6 +101,7 @@ export default function Intro() {
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/Wasay-Rana"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <FaGithubSquare />
         </a>

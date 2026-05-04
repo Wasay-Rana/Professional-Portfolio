@@ -1,31 +1,29 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import Image, { StaticImageData } from "next/image";
 
-interface ProjectProps {
+interface ProjectData {
   title: string;
   description: string;
-  tags: string[];
-  imageUrl: string; // Add imageUrl property
+  tags: readonly string[];
+  imageUrl: StaticImageData;
 }
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  project: ProjectProps | null;
+  project: ProjectData | null;
 }
 
 export default function Modal({ isOpen, onClose, project }: ModalProps) {
-  // Close modal on 'Esc' key press
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        onClose();
-      }
+      if (event.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
   if (!isOpen || !project) return null;
@@ -35,18 +33,34 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4"
+      onClick={onClose}
     >
       <motion.div
-        initial={{ scale: 0.8 }}
-        animate={{ scale: 1 }}
-        exit={{ scale: 0.8 }}
-        className="bg-white dark:bg-gray-800 rounded-lg p-8 max-w-2xl shadow-lg"
+        initial={{ scale: 0.85, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.85, opacity: 0 }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        className="bg-white dark:bg-gray-900 rounded-2xl p-6 max-w-2xl w-full shadow-2xl max-h-[90vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
       >
-        <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-        <img src={project.imageUrl} alt={project.title} className="mb-4" /> {/* Render the image */}
-        <p className="text-gray-700 dark:text-gray-300">{project.description}</p>
-        <ul className="flex flex-wrap mt-4 gap-2">
+        <div className="relative w-full h-48 mb-5 rounded-xl overflow-hidden">
+          <Image
+            src={project.imageUrl}
+            alt={project.title}
+            fill
+            className="object-cover"
+            quality={90}
+          />
+        </div>
+
+        <h2 className="text-xl font-bold mb-3 dark:text-white">{project.title}</h2>
+
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+          {project.description}
+        </p>
+
+        <ul className="flex flex-wrap gap-2 mb-5">
           {project.tags.map((tag, index) => (
             <li
               className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
@@ -56,9 +70,10 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
             </li>
           ))}
         </ul>
+
         <button
           onClick={onClose}
-          className="mt-6 bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition"
+          className="mt-2 bg-gray-900 text-white py-2 px-6 rounded-full hover:bg-gray-700 transition text-sm dark:bg-gray-700 dark:hover:bg-gray-600"
         >
           Close
         </button>

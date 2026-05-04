@@ -1,25 +1,32 @@
 "use client";
+
 import { useState } from "react";
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import Modal from "./modal";
 import { useSectionInView } from "@/lib/hooks";
+import { StaticImageData } from "next/image";
 
-interface ProjectProps {
+interface ProjectData {
   title: string;
   description: string;
-  tags: string[];
-  imageUrl: string; // Add imageUrl property
+  tags: readonly string[];
+  imageUrl: StaticImageData;
 }
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects", 0.5);
-  const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(null);
+  const { ref } = useSectionInView("Projects", 0.3);
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleCardClick = (project: ProjectProps) => {
-    setSelectedProject(project);
+  const handleCardClick = (project: (typeof projectsData)[number]) => {
+    setSelectedProject({
+      title: project.title,
+      description: project.description,
+      tags: project.tags,
+      imageUrl: project.imageUrl,
+    });
     setIsModalOpen(true);
   };
 
@@ -33,13 +40,12 @@ export default function Projects() {
       <SectionHeading>My projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
-          <div key={index} onClick={() => handleCardClick(project)}>
+          <div key={index} onClick={() => handleCardClick(project)} className="cursor-pointer">
             <Project {...project} />
           </div>
         ))}
       </div>
 
-      {/* Modal for detailed project view */}
       <Modal isOpen={isModalOpen} onClose={closeModal} project={selectedProject} />
     </section>
   );
